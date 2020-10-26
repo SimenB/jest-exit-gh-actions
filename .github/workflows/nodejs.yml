@@ -31,7 +31,6 @@ jobs:
           node-version: 12.x
       - name: install
         run: yarn
-        uses: SimenB/github-actions-cpu-cores@v1
       - name: run tests
         run: yarn test
         env:
