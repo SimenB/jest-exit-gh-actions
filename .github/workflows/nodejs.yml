@@ -10,7 +10,6 @@ on:
 
 jobs:
   test:
-    name: Node v12 on ${{ matrix.os }}
     strategy:
       fail-fast: false
       matrix:
@@ -18,17 +17,8 @@ jobs:
     runs-on: ${{ matrix.os }}
 
     steps:
-      - name: Set git config
-        shell: bash
-        run: |
-          git config --global core.autocrlf false
-          git config --global core.symlinks true
-        if: runner.os == 'Windows'
       - uses: actions/checkout@v2
-      - name: Use Node.js 12.x
-        uses: actions/setup-node@v2.1.2
-        with:
-          node-version: 12.x
+      - uses: actions/setup-node@v2
       - name: install
         run: yarn
       - name: run tests
