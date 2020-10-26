@@ -31,10 +31,8 @@ jobs:
           node-version: 12.x
       - name: install
         run: yarn
-      - name: Get number of CPU cores
-        id: cpu-cores
         uses: SimenB/github-actions-cpu-cores@v1
       - name: run tests
-        run: yarn test --max-workers ${{ steps.cpu-cores.outputs.count }}
+        run: yarn test
         env:
           CI: true
