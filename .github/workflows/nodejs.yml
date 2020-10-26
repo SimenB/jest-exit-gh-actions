@@ -29,6 +29,8 @@ jobs:
         uses: actions/setup-node@v2.1.2
         with:
           node-version: 12.x
+      - name: install
+        run: yarn
       - name: Get number of CPU cores
         id: cpu-cores
         uses: SimenB/github-actions-cpu-cores@v1
