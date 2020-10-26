@@ -1,0 +1,13 @@
+{
+  "name": "jest-exit-gh-actions",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Simen Bekkhus <simenb@folio.no>",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^26.6.1"
+  }
+}
